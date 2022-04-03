@@ -5,11 +5,52 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Livraria</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            a{
+                text-decoration: none;
+                font-size:25px;
+                color:#000;
+                
+            }
+            a:hover{
+                color:#09f563;
+            }
+            #form_cadastro{
+                display:none;
+            }            
+        </style>
     </head>
     <body>
-        <div>TODO write content projeto livraria</div>
+        <center>
+            <fieldset>            
+                    <h1>Escolha sua ação</h1>
+                    <a href="Livros?a=apresentar">Apresentar Livros</a><br>
+                    <a onclick='mostrarcadastro()'>Cadastrar Livros</a><br>           
+
+            </fieldset>
+            <fieldset id='form_cadastro'>
+                <form action="Livros?a=cadastrar" method="post">
+                  <label for="titulo">Titulo:</label><br>
+                  <input type="text" id="titulo" name="titulo"><br>
+                  <label for="autor">Autor:</label><br>
+                  <input type="text" id="autor" name="autor"><br>
+                  <label for="editora">Editora:</label><br>
+                  <input type="text" id="editora" name="editora"><br>
+                  <label for="numPaginas">Numero de paginas:</label><br>
+                  <input type="number" id="numPaginas" name="numPaginas"><br>
+                  <input type='submit'>
+                </form>
+                
+            </fieldset>
+        </center>
+    <script>
+        function mostrarcadastro(){
+            console.log('teste'+Math.random());            
+            document.getElementById('form_cadastro').style.display="block";
+        }
+    </script>
     </body>
 </html>
