@@ -23,6 +23,12 @@ private int NumPaginas;
         this.Editora=Editora;
         this.NumPaginas=NumPaginas; 
     }
+    public void SetId(int Id){
+        this.Id=Id;
+    }
+    public int GetId(){
+        return Id;
+    }
     public void SetTitulo(String Titulo){
         this.Titulo=Titulo;
     }
